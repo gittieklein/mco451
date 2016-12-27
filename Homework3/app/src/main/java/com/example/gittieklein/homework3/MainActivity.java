@@ -12,14 +12,15 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     GridGameAdapter mObjGridGameAdapter;
-    View sbContainer = findViewById(R.id.activity_main);
+    View sbContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sbContainer = findViewById(R.id.activity_main);
         setUpBoard();
-        
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
