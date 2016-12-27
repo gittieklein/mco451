@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void startGame()
     {
-        mObjGridGameAdapter.startGame();
-        Snackbar.make(sbContainer, "New Game", Snackbar.LENGTH_SHORT);
+        mObjGridGameAdapter.startNewGame();
+        Snackbar.make(sbContainer, "New Game", Snackbar.LENGTH_SHORT).show();
     }
 
     private void setUpBoard()

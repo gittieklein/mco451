@@ -23,8 +23,19 @@ public class GridGameAdapter extends RecyclerView.Adapter<GridGameAdapter.ViewHo
     {
         mSquare = new boolean[16];
         mGenerator = new Random();
+        startGame();
+    }
+
+    private void startGame()
+    {
         mWinningNumber = mGenerator.nextInt(16);
         mSquare[mWinningNumber] = true;
+    }
+
+    public void startNewGame()
+    {
+        mSquare[mWinningNumber] = false;
+        startGame();
     }
 
     @Override
@@ -61,11 +72,6 @@ public class GridGameAdapter extends RecyclerView.Adapter<GridGameAdapter.ViewHo
         return mSquare[num];
     }
 
-    public void startGame()
-    {
-        mSquare[mWinningNumber] = false;
-        mWinningNumber = mGenerator.nextInt(16);
-        mSquare[mWinningNumber] = true;
-    }
+
 }
 
